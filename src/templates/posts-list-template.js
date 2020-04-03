@@ -14,7 +14,7 @@ type Props = {
   pageContext: PageContext
 };
 
-const IndexTemplate = ({ data, pageContext }: Props) => {
+const PostsListTemplate = ({ data, pageContext }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
 
   const { currentPage, hasNextPage, hasPrevPage, prevPagePath, nextPagePath } = pageContext;
@@ -24,7 +24,7 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
-      <Sidebar isIndex />
+      <Sidebar />
       <Page>
         <Feed edges={edges} />
         <Pagination
@@ -39,7 +39,7 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
 };
 
 export const query = graphql`
-  query IndexTemplate($postsLimit: Int!, $postsOffset: Int!) {
+  query PostsListTemplate($postsLimit: Int!, $postsOffset: Int!) {
     allMarkdownRemark(
       limit: $postsLimit
       skip: $postsOffset
@@ -57,6 +57,7 @@ export const query = graphql`
             date
             category
             description
+            socialImage
           }
         }
       }
@@ -64,4 +65,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexTemplate;
+export default PostsListTemplate;

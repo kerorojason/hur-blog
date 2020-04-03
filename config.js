@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://hur.life',
   pathPrefix: '/',
   title: 'Hur Blog',
   subtitle: 'Blog by Hur Wang',
@@ -13,7 +13,15 @@ module.exports = {
   menu: [
     {
       label: 'Articles',
-      path: '/'
+      path: '/posts'
+    },
+    {
+      label: 'Categories',
+      path: '/categories'
+    },
+    {
+      label: 'Tags',
+      path: '/tags'
     },
     {
       label: 'About me',

@@ -10,13 +10,12 @@ import { useSiteMetadata, useCategoriesList } from '../hooks';
 const CategoriesListTemplate = () => {
   const { title, subtitle } = useSiteMetadata();
   const categories = useCategoriesList();
-
   return (
     <Layout title={`Categories - ${title}`} description={subtitle}>
       <Sidebar />
-      <Page title="Categories">
+      <Page title='Categories'>
         <ul>
-          {categories.map((category) => (
+          {categories.map(category => (
             <li key={category.fieldValue}>
               <Link to={`/category/${kebabCase(category.fieldValue)}/`}>
                 {category.fieldValue} ({category.totalCount})
