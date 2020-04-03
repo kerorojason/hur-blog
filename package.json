@@ -1,7 +1,7 @@
 {
   "version": "3.0.3",
-  "name": "gatsby-starter-lumen",
-  "description": "A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs",
+  "name": "hur-life",
+  "description": "Hur Wang's Blog",
   "main": "n/a",
   "scripts": {
     "develop": "npm run clean && gatsby develop",
